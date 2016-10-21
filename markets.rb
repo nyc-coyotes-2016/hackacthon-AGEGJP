@@ -10,5 +10,18 @@ class Markets
     end
   end
 
+  def search_by_borough(borough)
+    markets.select {|market| market.borough == borough.capitalize}
+  end
+
+
+  def sort_by_borough
+    markets.sort_by{|obj| obj.borough.capitalize}
+  end
+
+  def sort_by_zip_code
+    markets.sort_by{|obj| obj.zipcode}
+  end
+
 
 end
